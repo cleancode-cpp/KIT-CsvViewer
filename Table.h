@@ -13,8 +13,9 @@ struct Table {
   Row header;
   Grid grid;
 
-  // later with C++20
-  // bool operator==(const Table &) const = default;
+  bool operator==(const Table &o) const {
+    return header == o.header && grid == o.grid; //
+  }
 };
 
 } // namespace csv

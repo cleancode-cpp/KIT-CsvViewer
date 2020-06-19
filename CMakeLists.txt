@@ -17,9 +17,13 @@ add_library(csv_lib)
 target_sources(csv_lib
     PRIVATE
         Hints.cc
+        Parser.cc
     PUBLIC
         Hints.h
+        Table.h
         Parser.h
+    PRIVATE
+        Table.ostream.h
 )
 set_target_properties(csv_lib PROPERTIES
     COMPILE_FLAGS "${cxx_strict}"

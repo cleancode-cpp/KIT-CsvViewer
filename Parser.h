@@ -3,7 +3,7 @@
 
 namespace csv {
 
-auto parse(string) -> Table { return {}; }
+auto parse(string) -> Table;
 
 } // namespace csv
 

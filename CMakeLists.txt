@@ -19,6 +19,7 @@ target_sources(csv_lib
         Hints.cc
     PUBLIC
         Hints.h
+        Parser.h
 )
 set_target_properties(csv_lib PROPERTIES
     COMPILE_FLAGS "${cxx_strict}"
@@ -43,6 +44,7 @@ add_executable(csv_tests)
 target_sources(csv_tests
     PRIVATE
         HintsUnitTests.cc
+        ParserUnitTests.cc
 )
 set_target_properties(csv_tests PROPERTIES
     COMPILE_FLAGS "${cxx_strict}"

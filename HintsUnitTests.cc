@@ -1,6 +1,6 @@
-#include <gtest/gtest.h>
-
 #include "Hints.h"
+
+#include <gtest/gtest.h>
 
 TEST(Hints_SplitLine, Empty) {
   auto given = std::string{};

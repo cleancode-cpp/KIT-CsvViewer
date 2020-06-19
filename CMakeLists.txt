@@ -18,10 +18,12 @@ target_sources(csv_lib
     PRIVATE
         Hints.cc
         Parser.cc
+        Formatter.cc
     PUBLIC
         Hints.h
         Table.h
         Parser.h
+        Formatter.h
     PRIVATE
         Table.ostream.h
 )
@@ -49,6 +51,7 @@ target_sources(csv_tests
     PRIVATE
         HintsUnitTests.cc
         ParserUnitTests.cc
+        FormatterUnitTests.cc
 )
 set_target_properties(csv_tests PROPERTIES
     COMPILE_FLAGS "${cxx_strict}"

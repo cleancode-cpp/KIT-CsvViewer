@@ -3,6 +3,22 @@
 
 namespace csv {
 
+struct CurrentPage {
+  int v;
+};
+struct PageSize {
+  int v;
+};
+struct RowCount {
+  int v;
+};
+
+struct PageCounter {
+  CurrentPage curret;
+  PageSize pageSize;
+  RowCount totalRows;
+};
+
 struct Page {
   Table table{};  // full table
   int current{};  // current page

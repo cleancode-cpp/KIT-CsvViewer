@@ -53,4 +53,24 @@ auto formatPage(const Page &page) -> string {
   return stream.str();
 }
 
+auto formatPageCounter(const PageCounter &pageCounter) -> string {
+  auto stream = std::stringstream{};
+  auto pageCount = (pageCounter.totalRows.v + pageCounter.pageSize.v - 1) / pageCounter.pageSize.v;
+  stream << "Page " << (pageCounter.curret.v + 1) << " of " << pageCount;
+  return stream.str();
+}
+
+auto formatActions(const Labels &labels) -> string {
+  auto stream = std::stringstream{};
+  auto first = true;
+  for (auto &label : labels) {
+    if (!first)
+      stream << ", ";
+    else
+      first = false;
+    stream << label;
+  }
+  return stream.str();
+}
+
 } // namespace csv

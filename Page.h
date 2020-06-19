@@ -10,7 +10,7 @@ struct Page {
 
   Page() = default;
   Page(Table table, int current, int rowCount)
-      : table(table)
+      : table(std::move(table))
       , current(current)
       , rowCount(rowCount) {}
 

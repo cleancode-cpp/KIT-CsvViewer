@@ -3,6 +3,6 @@
 
 namespace csv {
 
-auto formatPage(Page page) -> string;
+auto formatPage(const Page &page) -> string;
 
 } // namespace csv

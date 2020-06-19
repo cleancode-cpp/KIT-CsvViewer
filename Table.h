@@ -15,8 +15,8 @@ struct Table {
 
   Table() = default;
   Table(Row header, Grid grid)
-      : header(header)
-      , grid(grid) {}
+      : header(std::move(header))
+      , grid(std::move(grid)) {}
 
   bool operator==(const Table &o) const {
     return header == o.header && grid == o.grid; //

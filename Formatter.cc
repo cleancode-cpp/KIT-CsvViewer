@@ -21,7 +21,7 @@ auto end(const Page &page) -> Grid::const_iterator {
                        page.table.grid.size());
 }
 
-auto computeMaxColumnWidths(Page page) -> Widths {
+auto computeMaxColumnWidths(const Page &page) -> Widths {
   auto columnCount = page.table.header.size();
   auto widths = Widths{};
   widths.resize(columnCount, 0);
@@ -40,7 +40,7 @@ auto computeMaxColumnWidths(Page page) -> Widths {
   return widths;
 }
 
-auto formatPage(Page page) -> string {
+auto formatPage(const Page &page) -> string {
   auto widths = computeMaxColumnWidths(page);
 
   auto stream = std::stringstream{};

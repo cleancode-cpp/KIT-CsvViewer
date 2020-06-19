@@ -1,3 +1,4 @@
-.vs/
-bin/
-tmp/
+*.user
+build/
+.vscode/
+compile_commands.json
